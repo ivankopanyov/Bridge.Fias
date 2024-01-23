@@ -1,6 +1,8 @@
 # Bridge.Fias
 #### _Библиотека, разработанная на языке C# на платформе .NET Framework 4.8.1, для взаимодействия с Oracle® Hospitality Hotel Property Interface IFC8 FIAS Release 2.20.25._
 
+[Документация Oracle® Hospitality Hotel Property Interface IFC8 FIAS Release 2.20.25](https://github.com/ivankopanyov/Bridge.Fias/blob/master/HGBU-HPI-IFC8-FIAS-Specification2.25.pdf)
+
 #### _Пример_
 
 ```cs
