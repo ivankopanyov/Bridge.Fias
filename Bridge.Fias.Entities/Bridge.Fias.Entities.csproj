@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C107D2D-CD13-42BF-8274-ADF6CF86FCB7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bridge.Fias.Entities</RootNamespace>
+    <AssemblyName>Bridge.Fias.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Portable.System.DateTimeOnly, Version=8.0.0.3, Culture=neutral, PublicKeyToken=16fb7a27ac3b9689, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.System.DateTimeOnly.8.0.0\lib\net462\Portable.System.DateTimeOnly.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\FiasForAttribute.cs" />
+    <Compile Include="Attributes\FiasIntegerAttribute.cs" />
+    <Compile Include="Attributes\FiasMessageAttribute.cs" />
+    <Compile Include="Attributes\FiasMessageDirections.cs" />
+    <Compile Include="Attributes\FiasOptionsAttribute.cs" />
+    <Compile Include="Base\FiasMessageBase.cs" />
+    <Compile Include="Base\FiasMessageFromPms.cs" />
+    <Compile Include="Base\FiasMessageToPms.cs" />
+    <Compile Include="Both\FiasLinkAlive.cs" />
+    <Compile Include="Both\FiasLinkEnd.cs" />
+    <Compile Include="Both\FiasLinkStart.cs" />
+    <Compile Include="Both\FiasMessageDelete.cs" />
+    <Compile Include="Both\FiasWakeupClear.cs" />
+    <Compile Include="Both\FiasWakeupRequest.cs" />
+    <Compile Include="Common\FiasCommonMessage.cs" />
+    <Compile Include="Enums\FiasAnswerStatuses.cs" />
+    <Compile Include="Enums\FiasClassesOfService.cs" />
+    <Compile Include="Enums\FiasEquipmentStatus.cs" />
+    <Compile Include="Enums\FiasGuestLanguages.cs" />
+    <Compile Include="Enums\FiasInterfaceTypes.cs" />
+    <Compile Include="Enums\FiasKeyRequestTypes.cs" />
+    <Compile Include="Enums\FiasKeyTypes.cs" />
+    <Compile Include="Enums\FiasMinibarRights.cs" />
+    <Compile Include="Enums\FiasPostingTypes.cs" />
+    <Compile Include="Enums\FiasRoomMaidStatuses.cs" />
+    <Compile Include="Enums\FiasTVRights.cs" />
+    <Compile Include="Enums\FiasVideoRights.cs" />
+    <Compile Include="FiasCommonMessage.cs" />
+    <Compile Include="FiasEnviroments.cs" />
+    <Compile Include="FiasMessages.cs" />
+    <Compile Include="FromPms\FiasDatabaseResyncEnd.cs" />
+    <Compile Include="FromPms\FiasDatabaseResyncStart.cs" />
+    <Compile Include="FromPms\FiasGuestBillBalance.cs" />
+    <Compile Include="FromPms\FiasGuestBillItem.cs" />
+    <Compile Include="FromPms\FiasGuestChange.cs" />
+    <Compile Include="FromPms\FiasGuestCheckIn.cs" />
+    <Compile Include="FromPms\FiasGuestCheckOut.cs" />
+    <Compile Include="FromPms\FiasKeyDataChange.cs" />
+    <Compile Include="FromPms\FiasKeyDelete.cs" />
+    <Compile Include="FromPms\FiasKeyReadResponse.cs" />
+    <Compile Include="FromPms\FiasKeyRequest.cs" />
+    <Compile Include="FromPms\FiasLinkConfiguration.cs" />
+    <Compile Include="FromPms\FiasLocatorRetrieveResponse.cs" />
+    <Compile Include="FromPms\FiasMessageText.cs" />
+    <Compile Include="FromPms\FiasMessageTextOnlineResponse.cs" />
+    <Compile Include="FromPms\FiasNightAuditEnd.cs" />
+    <Compile Include="FromPms\FiasNightAuditStart.cs" />
+    <Compile Include="FromPms\FiasPostingAnswer.cs" />
+    <Compile Include="FromPms\FiasPostingList.cs" />
+    <Compile Include="FromPms\FiasRemoteCheckOutResponse.cs" />
+    <Compile Include="FromPms\FiasRoomEquipmentStatusResponse.cs" />
+    <Compile Include="Json\Converters\FiasBoolConverter.cs" />
+    <Compile Include="Json\Converters\FiasDateConverter.cs" />
+    <Compile Include="Json\Converters\FiasFlagConverter.cs" />
+    <Compile Include="Json\Converters\FiasTimeConverter.cs" />
+    <Compile Include="Json\Writers\FiasJsonWriter.cs" />
+    <Compile Include="Options\Base\FiasOptions.cs" />
+    <Compile Include="Options\FiasDatabaseResyncEndOptions.cs" />
+    <Compile Include="Options\FiasDatabaseResyncRequestOptions.cs" />
+    <Compile Include="Options\FiasDatabaseResyncStartOptions.cs" />
+    <Compile Include="Options\FiasGuestBillBalanceOptions.cs" />
+    <Compile Include="Options\FiasGuestBillItemOptions.cs" />
+    <Compile Include="Options\FiasGuestBillRequestOptions.cs" />
+    <Compile Include="Options\FiasGuestChangeOptions.cs" />
+    <Compile Include="Options\FiasGuestCheckInOptions.cs" />
+    <Compile Include="Options\FiasGuestCheckOutOptions.cs" />
+    <Compile Include="Options\FiasKeyAnswerOptions.cs" />
+    <Compile Include="Options\FiasKeyDataChangeOptions.cs" />
+    <Compile Include="Options\FiasKeyDeleteOptions.cs" />
+    <Compile Include="Options\FiasKeyReadOptions.cs" />
+    <Compile Include="Options\FiasKeyRequestOptions.cs" />
+    <Compile Include="Options\FiasLocatorOffOptions.cs" />
+    <Compile Include="Options\FiasLocatorOnOptions.cs" />
+    <Compile Include="Options\FiasLocatorRetrieveOptions.cs" />
+    <Compile Include="Options\FiasMessageDeleteOptions.cs" />
+    <Compile Include="Options\FiasMessageRequestOptions.cs" />
+    <Compile Include="Options\FiasMessageTextOnlineOptions.cs" />
+    <Compile Include="Options\FiasMessageTextOptions.cs" />
+    <Compile Include="Options\FiasNightAuditEndOptions.cs" />
+    <Compile Include="Options\FiasNightAuditStartOptions.cs" />
+    <Compile Include="Options\FiasPostingAnswerOptions.cs" />
+    <Compile Include="Options\FiasPostingListOptions.cs" />
+    <Compile Include="Options\FiasPostingRequestOptions.cs" />
+    <Compile Include="Options\FiasPostingSimpleOptions.cs" />
+    <Compile Include="Options\FiasRemoteCheckOutOptions.cs" />
+    <Compile Include="Options\FiasRoomEquipmentStatusOptions.cs" />
+    <Compile Include="Options\FiasVirtualNumberNotificationOptions.cs" />
+    <Compile Include="Options\FiasWakeupAnswerOptions.cs" />
+    <Compile Include="Options\FiasWakeupClearOptions.cs" />
+    <Compile Include="Options\FiasWakeupRequestOptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Mapping\FiasMapper.cs" />
+    <Compile Include="Services\Mapping\FiasMappingProfile.cs" />
+    <Compile Include="Services\Mapping\IFiasMapper.cs" />
+    <Compile Include="ToPms\FiasDatabaseResyncRequest.cs" />
+    <Compile Include="ToPms\FiasGuestBillRequest.cs" />
+    <Compile Include="ToPms\FiasKeyAnswer.cs" />
+    <Compile Include="ToPms\FiasKeyReadRequest.cs" />
+    <Compile Include="ToPms\FiasLinkDescription.cs" />
+    <Compile Include="ToPms\FiasLinkDescriptionRequestTypes.cs" />
+    <Compile Include="ToPms\FiasLinkRecord.cs" />
+    <Compile Include="ToPms\FiasLocatorOff.cs" />
+    <Compile Include="ToPms\FiasLocatorOn.cs" />
+    <Compile Include="ToPms\FiasLocatorRetrieveRequest.cs" />
+    <Compile Include="ToPms\FiasMessageRequest.cs" />
+    <Compile Include="ToPms\FiasMessageTextOnlineRequest.cs" />
+    <Compile Include="ToPms\FiasPostingRequest.cs" />
+    <Compile Include="ToPms\FiasPostingSimple.cs" />
+    <Compile Include="ToPms\FiasRemoteCheckOutRequest.cs" />
+    <Compile Include="ToPms\FiasRoomEquipmentStatusRequest.cs" />
+    <Compile Include="ToPms\FiasVirtualNumberNotification.cs" />
+    <Compile Include="ToPms\FiasWakeupAnswer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
