@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge.Fias.Entities", "Bridge.Fias.Entities\Bridge.Fias.Entities.csproj", "{3C107D2D-CD13-42BF-8274-ADF6CF86FCB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge.Fias", "Bridge.Fias\Bridge.Fias.csproj", "{4A498666-5574-4FB7-8DFE-6B80E1D3DD7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3C107D2D-CD13-42BF-8274-ADF6CF86FCB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C107D2D-CD13-42BF-8274-ADF6CF86FCB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C107D2D-CD13-42BF-8274-ADF6CF86FCB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A498666-5574-4FB7-8DFE-6B80E1D3DD7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A498666-5574-4FB7-8DFE-6B80E1D3DD7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A498666-5574-4FB7-8DFE-6B80E1D3DD7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A498666-5574-4FB7-8DFE-6B80E1D3DD7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
